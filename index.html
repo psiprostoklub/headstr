@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ЖИВАЯ ЛИНИЯ | Психолог онлайн, группы ВДА, лекторий, обучение и клуб</title>
+<meta name="description" content="Онлайн-консультации с психологами от 750 ₽, групповая терапия ВДА, бесплатный лекторий, обучение и клуб для психологов.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+/* Фирменный Cygre: подключите ttf через @font-face и поставьте первым в --sans / --serif */
+:root{--ink:#17142A;--deep:#241B5E;--night:#241B5E;--violet:#6B4EFF;--coral:#FF6B6B;--lav:#F1EEFB;--lav2:#E7E1F8;--line:#D8D0F2;--grad:linear-gradient(90deg,#6B4EFF,#FF6B6B);--muted:#5C5878;
+--sans:'Onest',system-ui,-apple-system,'Segoe UI',sans-serif;--serif:'Playfair Display',Georgia,'Times New Roman',serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--sans);color:var(--ink);background:var(--lav);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.w{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);line-height:1.1;letter-spacing:-.01em}
+h1{font-size:clamp(38px,5.6vw,68px)}
+h2{font-size:clamp(30px,4vw,48px);margin-bottom:16px}
+h3{font-size:24px;margin-bottom:8px}
+em.i{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.08em}
+.dark em.i{background:linear-gradient(90deg,#B9A8FF,#FF9A9A);-webkit-background-clip:text;background-clip:text}
+.lead{font-size:19px;max-width:620px;opacity:.82}
+.btn{display:inline-block;text-decoration:none;text-transform:uppercase;letter-spacing:.04em;font-weight:700;font-size:14px;padding:17px 30px;border-radius:999px;background:var(--grad);color:#fff;text-align:center;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(107,78,255,.3)}
+.btn.o{background:transparent;color:var(--violet);box-shadow:inset 0 0 0 2px var(--violet)}
+.btn.o:hover{background:var(--violet);color:#fff}
+.dark .btn.o{color:#fff;box-shadow:inset 0 0 0 2px #fff}
+.dark .btn.o:hover{background:#fff;color:var(--deep)}
+.btn.w1{background:#fff;color:var(--deep)}
+.btn.s{padding:12px 22px;font-size:12px}
+:focus-visible{outline:3px solid var(--violet);outline-offset:3px;border-radius:10px}
+.dark :focus-visible{outline-color:#fff}
+.band{padding:88px 0}
+.dark{background:var(--deep);color:#fff}
+.dark .lead{opacity:.85}
+.chip{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;margin-bottom:18px}
+.chip::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--grad)}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(241,238,251,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:22px;height:72px}
+.bar img{height:42px}
+nav{display:flex;gap:2px;margin-left:auto}
+nav a{text-decoration:none;font-weight:500;font-size:15px;padding:9px 13px;border-radius:10px}
+nav a:hover{background:var(--lav2)}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:84px 0 96px;background:radial-gradient(700px 420px at 92% 0,rgba(255,107,107,.2),transparent 60%),radial-gradient(620px 420px at 0 100%,rgba(107,78,255,.16),transparent 60%),var(--lav)}
+.ring{position:absolute;right:-180px;top:-160px;width:620px;height:620px;border-radius:50%;background:conic-gradient(from 200deg,#FF6B5E,#7B5CF0,#2EC4B6,#FF6B5E);-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 46px),#000 calc(100% - 45px));mask:radial-gradient(farthest-side,transparent calc(100% - 46px),#000 calc(100% - 45px));opacity:.5}
+.hg{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero .lead{margin:22px 0 0;font-size:18px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.tabs{background:#fff;color:var(--ink);border-radius:28px;padding:10px;box-shadow:0 24px 50px rgba(107,78,255,.2)}
+.tabs input{position:absolute;opacity:0;pointer-events:none}
+.seg{display:grid;grid-template-columns:1fr 1fr;background:var(--lav2);border-radius:20px;padding:5px;gap:4px}
+.seg label{text-align:center;padding:12px 8px;border-radius:16px;font-weight:600;font-size:15px;cursor:pointer}
+#t1:checked~.seg [for=t1],#t2:checked~.seg [for=t2]{background:#fff;box-shadow:0 2px 8px rgba(36,26,92,.15);color:var(--violet)}
+#t1:focus-visible~.seg [for=t1],#t2:focus-visible~.seg [for=t2]{outline:3px solid var(--violet)}
+.p{display:none;padding:6px 10px 12px}
+#t1:checked~.p1,#t2:checked~.p2{display:block}
+.row{display:flex;justify-content:space-between;align-items:center;gap:14px;text-decoration:none;padding:15px 6px;border-bottom:1px solid var(--line)}
+.row:last-child{border:0}
+.row b{display:block;font-size:17px}.row small{color:var(--muted);font-size:14px}
+.row em{font-style:normal;font-weight:700;color:var(--violet);white-space:nowrap;font-size:15px}
+.row:hover b{color:var(--violet)}
+
+/* facts */
+.fh{padding-top:56px}.fh h2{font-size:clamp(26px,3.4vw,38px);margin:0}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding:28px 24px 44px;border-bottom:1px solid var(--line)}
+.facts b{display:block;font-family:var(--serif);font-size:38px;line-height:1.1}
+.facts span{color:var(--muted);font-size:15px}
+
+/* consult */
+.coral{background:var(--lav2)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:36px}
+.plan{background:#fff;border-radius:28px;padding:34px;display:flex;flex-direction:column}
+.plan.n{background:var(--night);color:#fff}
+.price{font-family:var(--serif);font-size:54px;font-weight:700;line-height:1;margin:6px 0 10px}
+.price small{font-family:var(--sans);font-size:16px;font-weight:500;opacity:.65}
+.plan ul{list-style:none;margin:12px 0 26px}
+.plan li{padding:6px 0 6px 28px;position:relative}
+.plan li::before{content:"\2713";position:absolute;left:0;color:var(--violet);font-weight:800}
+.plan.n li::before{color:#FFB3B3}
+.plan .btn{margin-top:auto;align-self:flex-start}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:40px;position:relative}
+.flow div{padding:0 22px 0 0}
+.flow div::before{content:attr(data-n);display:flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:50%;background:var(--grad);color:#fff;font-weight:700;margin-bottom:12px}
+.flow span{color:var(--muted);font-size:15px;display:block}
+.note2{margin-top:36px;padding:26px 30px;border-radius:24px;background:#fff;display:grid;grid-template-columns:1fr 1.5fr;gap:26px;align-items:center}
+.note2 h3{margin:0;font-size:22px}.note2 p{color:var(--muted)}
+
+/* groups */
+.gg{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.trio{display:flex;gap:26px;margin:28px 0 32px}
+.trio b{display:block;font-family:var(--serif);font-size:52px;line-height:1;color:#FFB3B3}
+.trio span{font-size:14px;opacity:.85;display:block;max-width:120px}
+.glist{background:rgba(255,255,255,.08);border-radius:28px;padding:10px 26px}
+.glist a{display:flex;justify-content:space-between;gap:14px;align-items:center;text-decoration:none;padding:17px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.glist a:last-child{border:0}
+.glist b{display:block}.glist small{opacity:.7;font-size:14px}
+.glist em{font-style:normal;font-weight:700;white-space:nowrap;color:#FFB3B3}
+.glist a:hover b{text-decoration:underline}
+
+/* lectures */
+.mint{background:var(--lav)}
+.lg{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.free{font-family:var(--serif);font-size:clamp(70px,11vw,140px);font-weight:700;line-height:.9;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.08em}
+.spk{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.spk span{background:var(--lav2);border-radius:999px;padding:9px 16px;font-size:15px;font-weight:500}
+.lec-pts{list-style:none;margin:22px 0 28px}
+.lec-pts li{padding:5px 0 5px 28px;position:relative}
+.lec-pts li::before{content:"\2713";position:absolute;left:0;color:var(--violet);font-weight:800}
+
+/* club */
+.night{background:var(--night);color:#fff}
+.stairs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:end;margin:44px 0 36px}
+.st{border-radius:24px 24px 0 0;padding:24px;display:flex;flex-direction:column;justify-content:flex-end}
+.st:nth-child(1){min-height:170px;background:#3B2F8F}
+.st:nth-child(2){min-height:240px;background:#5B3FD6}
+.st:nth-child(3){min-height:310px;background:linear-gradient(160deg,#7B5CF0,#FF6B6B)}
+.st b{font-family:var(--serif);font-size:30px}.st span{font-size:15px;opacity:.9}
+.cl{display:grid;grid-template-columns:1.2fr .8fr;gap:44px;align-items:center}
+.cl ul{list-style:none}
+.cl li{padding:6px 0 6px 28px;position:relative}
+.cl li::before{content:"\2713";position:absolute;left:0;color:#FFB3B3;font-weight:800}
+.cbox{background:rgba(255,255,255,.08);border-radius:28px;padding:32px}
+.cbox .price{color:#fff}
+
+/* education */
+.big{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;margin-top:34px}
+.pg{background:var(--deep);color:#fff;border-radius:28px;padding:34px;display:flex;flex-direction:column}
+.pg ul{list-style:none;margin:10px 0 24px;opacity:.92}
+.pg li{padding:5px 0 5px 28px;position:relative}
+.pg li::before{content:"\2713";position:absolute;left:0;color:#FFB3B3;font-weight:800}
+.pg .btn{margin-top:auto;align-self:flex-start}
+.tt{background:var(--lav);border:2px solid var(--line);border-radius:28px;padding:8px 26px}
+.tt h3{padding:22px 0 8px;font-size:22px}
+.cr{display:grid;grid-template-columns:96px 1fr auto;gap:18px;align-items:center;padding:18px 0;border-top:1px solid var(--line)}
+.cr:first-of-type{border-top:0}
+.cr time{font-weight:700;color:var(--violet);font-size:15px;line-height:1.3}
+.cr b{display:block;line-height:1.3}.cr small{color:var(--muted);font-size:14px}
+.cr .pr{font-weight:800;white-space:nowrap}
+.cr .btn{display:none}
+
+/* reviews, faq, final */
+.q{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:34px}
+.q p{font-family:var(--serif);font-size:21px;line-height:1.4;margin-bottom:12px;font-weight:600}
+.q p::before{content:"\201C";display:block;font-size:56px;line-height:.6;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.q span{color:var(--muted);font-size:14px}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:0 40px;margin-top:30px}
+details{border-top:1px solid var(--line);padding:20px 0}
+summary{cursor:pointer;font-weight:600;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:26px;line-height:1;color:var(--violet)}
+details[open] summary::after{content:"\2212"}
+details p{margin-top:10px;color:var(--muted)}
+.final{position:relative;overflow:hidden;text-align:center;background:var(--grad)}
+.final .btn{background:#fff;color:var(--violet)}
+.final .btn.o{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px #fff}
+.final .btn.o:hover{background:#fff;color:var(--violet)}
+.final em.i{background:none;color:#fff;-webkit-text-fill-color:#fff}
+.final .ring{right:50%;margin-right:-310px;top:auto;bottom:-420px;opacity:1;background:none;border:44px solid rgba(255,255,255,.22);-webkit-mask:none;mask:none}
+.final .w{position:relative}
+.final p{max-width:540px;margin:0 auto 28px;opacity:.88}
+footer{background:var(--night);color:#C9C3E6;padding:56px 0 30px;font-size:15px}
+.fg{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:30px}
+footer b{color:#fff;display:block;margin-bottom:10px}
+footer a{display:block;text-decoration:none;padding:3px 0}
+footer a:hover{color:#fff;text-decoration:underline}
+.lg2{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);font-size:13px;opacity:.8}
+
+@media(max-width:980px){
+  .hg,.gg,.lg,.cl,.big,.two,.note2{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr 1fr}.q,.faq{grid-template-columns:1fr}.fg{grid-template-columns:1fr 1fr}
+  nav{display:none}.bar .btn{margin-left:auto}
+  .ring{width:420px;height:420px;right:-160px;top:-120px}
+}
+@media(max-width:620px){
+  body{font-size:16px}.band{padding:60px 0}.hero{padding:52px 0 64px}
+  .flow{grid-template-columns:1fr;gap:20px}.stairs{gap:8px}.st{padding:14px}.st b{font-size:20px}.st span{font-size:12px}
+  .cr{grid-template-columns:1fr auto}.cr time{grid-column:1/-1}.trio{gap:16px}.plan,.pg{padding:26px}.price{font-size:44px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="w bar">
+    <a href="https://zhivaya.org/" aria-label="ЖИВАЯ ЛИНИЯ"><img src="https://static.tildacdn.com/tild3566-3235-4433-b262-616261343566/__1.png" alt="ЖИВАЯ ЛИНИЯ"></a>
+    <nav aria-label="Разделы">
+      <a href="#konsultacii">Консультации</a><a href="#gruppy">Группы ВДА</a><a href="#lektoriy">Лекторий</a><a href="#klub">Клуб</a><a href="#obuchenie">Обучение</a><a href="https://zhivaya.org/volunteer">Психологам</a><a href="https://zhivaya.org/ocentre">О центре</a>
+    </nav>
+    <a class="btn s" href="https://zhivaya.org/vibor_psihologa">Записаться</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="ring" aria-hidden="true"></div>
+  <div class="w hg">
+    <div>
+      <h1>Психология, которая помогает менять жизнь.<br><em class="i">И профессию.</em></h1>
+      <p class="lead">Найдите своего психолога, начните работать над тем, что давно беспокоит, или присоединитесь к терапевтической группе. Хотите большего? Открывайте для себя психологию на бесплатных лекциях, осваивайте новые методы, учитесь и развивайтесь вместе с профессиональным сообществом.<br><br><b>От первой консультации до профессионального роста.</b> Выбирайте свой путь вместе с «ПСИХОЛОГИЯ ПРОСТО».</p>
+    </div>
+    <div class="tabs">
+      <input type="radio" name="t" id="t1" checked><input type="radio" name="t" id="t2">
+      <div class="seg"><label for="t1">Мне нужна помощь</label><label for="t2">Я психолог</label></div>
+      <div class="p p1">
+        <a class="row" href="#konsultacii"><span><b>Консультация с психологом</b><small>Хочу поговорить и разобраться, что происходит</small></span><em>750 ₽</em></a>
+        <a class="row" href="#konsultacii"><span><b>Выбрать своего психолога</b><small>Каталог специалистов со знаком отличия</small></span><em>3 500 ₽</em></a>
+        <a class="row" href="#gruppy"><span><b>Групповая терапия ВДА</b><small>Последствия жизни в алкогольной семье</small></span><em>от 12 500 ₽/мес</em></a>
+        <a class="row" href="#lektoriy"><span><b>Открытый лекторий</b><small>Лучше понимать себя и других</small></span><em>бесплатно</em></a>
+      </div>
+      <div class="p p2">
+        <a class="row" href="#klub"><span><b>Психологический клуб</b><small>Лекции, супервизии, поддержка коллег</small></span><em>5 000 ₽</em></a>
+        <a class="row" href="#obuchenie"><span><b>Обучение</b><small>Программа с удостоверением, 108 ак. часов</small></span><em>85 000 ₽</em></a>
+        <a class="row" href="#kursy"><span><b>Курсы и мастер-классы</b><small>Конкретные техники, сертификат</small></span><em>от 2 200 ₽</em></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="w fh"><h2>Психология с опорой <em class="i">на качество</em></h2></div>
+<div class="w facts">
+  <div><b>50 минут</b><span>видеоконсультация, анонимно</span></div>
+  <div><b>10%</b><span>психологов проходят отбор на коммерческий тариф</span></div>
+  <div><b>4 месяца</b><span>живой групповой работы по схема-терапии</span></div>
+  <div><b>ФИС ФРДО</b><span>документы об обучении вносятся в реестр</span></div>
+</div>
+
+<!-- КОНСУЛЬТАЦИИ -->
+<section class="band coral light" id="konsultacii">
+  <div class="w">
+    <div class="chip">Консультации онлайн</div>
+    <h2>Два формата психологической помощи. <em class="i">Выберите свой</em></h2>
+    <p class="lead">В обоих форматах вас ждёт 50-минутная онлайн-консультация с психологом. Разница в том, как вы выбираете специалиста и выстраиваете работу. Можно доверить подбор нашей команде или самостоятельно найти психолога, с которым захочется идти дальше.</p>
+    <div class="two">
+      <div class="plan">
+        <h3>Социальный тариф</h3>
+        <div class="price">750 ₽ <small>/ сессия</small></div>
+        <p>Доступная психологическая помощь, когда важно поговорить о том, что тревожит, получить поддержку и разобраться, с чего начать. Психолога для вас подбирает сервис с учётом доступных специалистов.</p>
+        <ul><li>Не нужно самостоятельно изучать анкеты и выбирать психолога</li><li>Простой процесс записи без долгих поисков</li><li>Хороший способ сделать первый шаг к психологической помощи</li></ul>
+        <!-- Сейчас ведёт на «Запись приостановлена». Когда запись откроется, замените на https://zhivaya.org/helpforyou -->
+        <a class="btn" href="https://zhivaya.org/maintenance">Получить консультацию за 750 ₽</a>
+      </div>
+      <div class="plan n">
+        <h3>Коммерческий тариф</h3>
+        <div class="price">3 500 ₽ <small>/ сессия</small></div>
+        <p>Вы сами выбираете психолога, ориентируясь на его специализацию, методы работы и личное впечатление. Подходит тем, кто хочет регулярно работать над своим запросом и выстраивать долгосрочные терапевтические отношения.</p>
+        <ul><li>Каталог специалистов с подробными анкетами и отметками прошедших отбор</li><li>Возможность выбрать психолога под свой запрос</li><li>Возможность продолжать работу с одним специалистом на регулярной основе</li></ul>
+        <a class="btn" href="https://zhivaya.org/vibor_psihologa">Найти своего психолога</a>
+      </div>
+    </div>
+    <div class="flow">
+      <div data-n="1"><b>Опишите запрос</b><span>«Всё сложно» тоже запрос</span></div>
+      <div data-n="2"><b>Выберите время</b><span>Оплата онлайн, ссылка придёт на почту</span></div>
+      <div data-n="3"><b>Подключитесь по видео</b><span>Понравилось, запишитесь снова</span></div>
+    </div>
+    <div class="note2">
+      <h3>Мы проверяем психологов в работе, а не только по диплому</h3>
+      <p>На коммерческий тариф попадают 10% специалистов: высшее психологическое образование или переподготовка от 1000 часов, не менее 30 сессий на социальной линии с рейтингом не ниже 5.0 и регулярные супервизии.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ГРУППЫ -->
+<section class="band dark" id="gruppy">
+  <div class="w gg">
+    <div>
+      <div class="chip">Групповая терапия ВДА</div>
+      <h2>4 месяца живой работы, после которых <em class="i">вы живёте иначе</em></h2>
+      <p class="lead">Для взрослых детей из алкогольных семей. Не записи, а живой процесс с психологом и группой по методике схема-терапии. Тревога, вина, страх конфликтов, границы, созависимость: это не поломка, а реакции, которые когда-то помогали выжить.</p>
+      <div class="trio"><div><b>16</b><span>лекций</span></div><div><b>16</b><span>блиц-сессий</span></div><div><b>16</b><span>домашних заданий</span></div></div>
+      <a class="btn" href="https://zhivaya.org/groupteraphy">Программа и запись</a>
+    </div>
+    <div class="glist">
+      <a href="http://zhivaya.org/manekina"><span><b>Ольга Манекина</b><small>с 29 ноября 2026 · вс 10:00, чт 19:00</small></span><em>15 000 ₽/мес</em></a>
+      <a href="https://zhivaya.org/brohina"><span><b>Татьяна Брохина</b><small>с 12 декабря 2026 · ср 19:00, сб 11:00</small></span><em>15 000 ₽/мес</em></a>
+      <a href="https://zhivaya.org/shlyafert"><span><b>Ирина Шляйферт</b><small>с 16 января 2027 · ср 19:00, сб 10:00</small></span><em>12 500 ₽/мес</em></a>
+      <a href="https://zhivaya.org/baykova"><span><b>Валерия Баукова</b><small>с 27 января 2027 · ср 19:00, вс 10:00</small></span><em>12 500 ₽/мес</em></a>
+      <a href="https://zhivaya.org/tkachenko"><span><b>Вероника Ткаченко</b><small>с 10 февраля 2027 · ср 19:00, вс 10:00</small></span><em>12 500 ₽/мес</em></a>
+      <a href="https://zhivaya.org/tarabrina"><span><b>Мария Тарабрина</b><small>с 18 февраля 2027 · вт и чт 18:30</small></span><em>12 500 ₽/мес</em></a>
+    </div>
+  </div>
+</section>
+
+<!-- ЛЕКТОРИЙ -->
+<section class="band mint light" id="lektoriy">
+  <div class="w lg">
+    <div>
+      <div class="chip">Открытый лекторий</div>
+      <h2>Психология простым языком</h2>
+      <p class="lead">Тревога, стресс, выгорание, границы, отношения. Только доказательная психология, без эзотерики и диагнозов по аватарке.</p>
+      <ul class="lec-pts"><li>Подключайтесь онлайн или смотрите в записи</li><li>В каждой лекции конкретные практические опоры</li><li>18+, из любой страны</li></ul>
+      <a class="btn" href="https://zhivaya.org/lectoriy">Зарегистрироваться на лекции</a>
+    </div>
+    <div>
+      <div class="free">Бесплатно</div>
+      <div class="spk"><span>Юлия Леликова</span><span>Ольга Сенаторова</span><span>Максим Лазарев</span><span>Константин Никулин</span><span>Марианна Коротина</span><span>и психологи «Живой линии»</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- КЛУБ -->
+<section class="band night" id="klub">
+  <div class="w">
+    <div class="chip">Психологический клуб</div>
+    <h2>Путь психолога <em class="i">от ученика до эксперта</em></h2>
+    <p class="lead">Сообщество, где есть лекции приглашённых спикеров, супервизии и понятный путь к частной практике на нашей платформе.</p>
+    <div class="stairs">
+      <div class="st"><b>Ученик</b><span>Учитесь, слушаете лекции, разбираете случаи. Для студентов и начинающих.</span></div>
+      <div class="st"><b>Практик</b><span>Ведёте приём и получаете обратную связь от коллег.</span></div>
+      <div class="st"><b>Эксперт</b><span>Коммерческий тариф: 3 500 ₽ за консультацию, клиенты выбирают вас сами.</span></div>
+    </div>
+    <div class="cl">
+      <ul>
+        <li>Лекции приглашённых экспертов по 2 часа с ответами на вопросы</li>
+        <li>Регулярные супервизии со старшими коллегами</li>
+        <li>Записи встреч в закрытом личном кабинете участников</li>
+        <li>Участие по публичной оферте, подробности на странице клуба</li>
+      </ul>
+      <div class="cbox">
+        <div class="price">5 000 ₽ <small>/ мес</small></div>
+        <!-- TODO: заменить ссылку на страницу клуба, когда она появится -->
+        <a class="btn" href="https://t.me/zhivaya_psychology">Вступить в клуб</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ОБУЧЕНИЕ -->
+<section class="band light" id="obuchenie" style="background:#fff">
+  <div class="w">
+    <div class="chip">Обучение для психологов</div>
+    <h2>Программы и курсы, которые <em class="i">применяются в практике</em></h2>
+    <div class="big">
+      <div class="pg">
+        <h3>Ведущий групповой терапии ВДА и ВДД</h3>
+        <div class="price">85 000 ₽</div>
+        <ul><li>108 академических часов, 16 недель, раз в неделю</li><li>Теория, методики и стажировка с реальными клиентами</li><li>Удостоверение о повышении квалификации, ФИС ФРДО</li><li>Папка ведущего: скрипты, карты, тетради</li></ul>
+        <p style="opacity:.75;font-size:14px;margin-bottom:18px">Преподаватели: Юлия Леликова, Ольга Сенаторова, Станислав Цверков. Дату ближайшего потока смотрите на странице программы.</p>
+        <a class="btn w1" href="https://zhivaya.org/education">Пройти обучение</a>
+      </div>
+      <div class="tt" id="kursy">
+        <h3>Ближайшие курсы и мастер-классы</h3>
+        <!-- TODO: заменить ссылки «Записаться» на страницы оплаты курсов -->
+        <div class="cr"><time>12, 14, 21 января</time><span><b>«Хочу здоровых отношений»</b><small>Юлия Леликова · 3 лекции по 2 часа · сертификат</small></span><span class="pr">8 800 ₽</span></div>
+        <div class="cr"><time>27 января</time><span><b>Техники возвращения образа пьющих родителей</b><small>Ольга Сенаторова · сертификат</small></span><span class="pr">3 000 ₽</span></div>
+        <div class="cr"><time>5 февраля</time><span><b>«Я опять маленькая»: ДПДГ при триггерах у ВДА и ВДД</b><small>Наталья Скварко · 2 часа · сертификат</small></span><span class="pr">2 200 ₽</span></div>
+        <div class="cr"><time>8 и 10 февраля</time><span><b>«Любить нельзя помиловать»: обида на родителей</b><small>Ольга Сенаторова · 2 лекции по 2 часа · сертификат</small></span><span class="pr">6 500 ₽</span></div>
+        <p style="padding:18px 0 22px"><a class="btn s" href="https://t.me/zhivaya_psychology">Записаться на курс</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ОТЗЫВЫ + FAQ -->
+<section class="band light" style="padding-top:0">
+  <div class="w">
+    <h2>Что говорят <em class="i">клиенты</em></h2>
+    <div class="q">
+      <div><p>Это была моя первая консультация с психологом в жизни. После встречи осталось чувство облегчения.</p><span>Консультация, социальный тариф</span></div>
+      <div><p>Эта терапия дала мне больше, чем два года личной работы с психологом. Это было моё лучшее вложение в себя.</p><span>Участник группы ВДА</span></div>
+      <div><p>Я пришла одним человеком, а ухожу совершенно другой. Появилась внутренняя опора.</p><span>Участница группы ВДА</span></div>
+    </div>
+    <h2 style="margin-top:80px">Частые вопросы</h2>
+    <div class="faq">
+      <details><summary>Чем отличаются тарифы 750 ₽ и 3 500 ₽?</summary><p>На социальном тарифе психолога назначает сервис, каждый раз может быть новый. На коммерческом вы выбираете психолога сами и работаете с ним регулярно.</p></details>
+      <details><summary>Консультация или группа?</summary><p>Консультация нужна, когда поддержка нужна прямо сейчас. Группа ВДА помогает системно проработать влияние детского опыта. Можно совмещать.</p></details>
+      <details><summary>Я не из алкогольной семьи, можно в группу?</summary><p>Ответ есть на странице групповой терапии, также можно уточнить у координатора.</p></details>
+      <details><summary>Лекторий правда бесплатный? Это терапия?</summary><p>Да, бесплатный. Это просветительский проект, он не заменяет консультацию или терапию.</p></details>
+      <details><summary>Не получается выбрать. Кто поможет?</summary><p>Напишите координатору в Telegram @zhivaya_psychology в двух-трёх фразах, он подскажет формат. Бесплатно.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="band dark final">
+  <div class="ring" aria-hidden="true"></div>
+  <div class="w">
+    <h2>Первый шаг проще, <em class="i">чем кажется</em></h2>
+    <p>Выберите формат, который подходит сейчас. Если сомневаетесь, напишите нам.</p>
+    <div class="cta" style="justify-content:center"><a class="btn" href="https://zhivaya.org/vibor_psihologa">Записаться к психологу</a><a class="btn o" href="https://t.me/zhivaya_psychology">Написать координатору</a></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="w">
+    <div class="fg">
+      <div><b>ЖИВАЯ ЛИНИЯ</b>Сервис психологической помощи онлайн<br><br><a href="mailto:info@zhivaya.org">info@zhivaya.org</a><a href="https://t.me/zhivaya_psychology">Поддержка в Telegram: @zhivaya_psychology</a>Клиентская служба: будни, 10:00-19:00</div>
+      <div><b>Помощь</b><a href="https://zhivaya.org/vibor_psihologa">Выбрать психолога</a><a href="https://zhivaya.org/groupteraphy">Группы ВДА</a><a href="https://zhivaya.org/lectoriy">Лекторий</a></div>
+      <div><b>Профессия</b><a href="https://zhivaya.org/education">Обучение</a><a href="#klub">Клуб</a><a href="https://zhivaya.org/volunteer">Психологам и студентам</a><a href="https://zhivaya.org/partners">Фондам и компаниям</a></div>
+      <div><b>Документы</b><a href="https://zhivaya.org/ocentre">О сервисе</a><a href="https://zhivaya.org/psy_offer">Оферта на платную консультацию</a><a href="https://zhivaya.org/oferta">Оферта на бесплатную консультацию</a><a href="https://zhivaya.org/doc">Образовательная лицензия</a><a href="https://zhivaya.org/dannie">Политика обработки ПД</a></div>
+    </div>
+    <div class="lg2"><a href="https://t.me/zhivayapsy" style="display:inline;margin-right:14px">Telegram</a><a href="https://vk.com/lelikovajul" style="display:inline;margin-right:14px">VK</a><a href="https://www.youtube.com/@lelikovajulia" style="display:inline;margin-right:14px">YouTube</a><a href="https://dzen.ru/julialelilkova" style="display:inline">Дзен</a>
+      <p style="margin-top:14px">© 2026 ООО Центр «Психология просто». ОГРН 1 255 000 058 675, ИНН 5 018 221 680, КПП 501 801 001. Сервис не является экстренной помощью.</p></div>
+  </div>
+</footer>
+</body>
+</html>
